@@ -7,34 +7,54 @@
 		</style>
 		<meta charset="utf-8">
 		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<link rel = "icon" href = "images/goldenratio.jpg">
 		<title>projects</title>
 	</head>
 	
 	<body>
-		<h1 style="text-align: left; font-size: 40;" ><i>PROJECTS</i></h1>
+		<h1 style="font-size: 40px;"><i>PROJECTS</i></h1>
 	
 		<p style="text-align: left; font-size: 24px;">
+		<h2>Custom 7-degree-of-freedom Robot arm (IN PROGRESS)</h2> 
+		This project was done as part of my MASc degree requirements. The purpose of this robot arm is to serve as an experimental setup for developing control and estimation algorithms. 
+		This is a retro-fitted UR5 with all custom joint electronics, shaft couplings, and mounting plates. The arm was built from scratch with the help of three other graduate students. <br>		
+
+
+		<h2>Toast-E: AI powered Smart Toaster </h2>		
+		My capstone project was an AI powered smart toaster running a closed loop controller for user selected crispiness level. This project was done with three other students. <br>		
+			<img src="images/toaste_on.png" alt="Centered and Smaller Image" style="width: 30%;"> 
+			<img src="images/toaste_lcd.png" alt="Centered and Smaller Image" style="width: 30%;"> <br>
+			<img src="images/pcbrev2_1.png" alt="Centered and Smaller Image" style="width: 30%;"> 
+			<img src="images/pcbrev2_2.png" alt="Centered and Smaller Image" style="width: 30%;"> 
+
+
+			<ul>
+				<li>Control script written in python running on a Raspberry Pi 4</li>
+				<li>Images captured every 15 seconds and put through a pre-trained CNN to determine crispiness of the toast</li>
+				<li>User selects crispiness level based on a touch screen LCD where a spectrum of levels is given (we also created an app)</li>
+				<li>Custom PCB housing a relay circuit for heating element control</li>
+				<li>Entire toaster was built from scratch using sheet metal, glass, nichrome wire, and 3D printed componentss</li>
+			</ul>
+
+		<h2>Ball and Beam Robotic Setup</h2>	
+		As a robotics research assistant at the ICE lab I was tasked to create 10 ball and beam robotic systems as project kits for the MECHENG 4SS3: Smart Systems course		
 		
-		list of projects I've worked on or contributed to <br>
+		<img src="images/ball_and_beam.jpg" alt="Centered and Smaller Image" style="width: 30%;"> 
+		<video width="600"  muted controls>
+		<source src="videos/bab_moving.mp4" type="video/mp4">
+		</video> <br>
+
 			<ul>
-				<li><a href="projects/developing.html">CERES</a> - 7-degree-of-freedom Robot arm for MASC - in progress </li>
-				<li><a href="projects/developing.html">E-ink Pomo</a> - Pomodoro timer device using an E-ink screen - in progress </li>
-				<li><a href="projects/developing.html">Self-balancing robot</a> - Experiemntal controls setup for MECHENG 4SS3 - finished - Summer 2024 </li>
-				<li><a href="projects/developing.html">Watchbox </a> - A laser cut box to hold my watches - finished - Summer 2024 </li>
-				<li><a href="projects/developing.html">Toast-E</a> - Smart toaster (uses AI) for capstone - finished - Fall 2024 : Winter 2024  </li>
-				<li><a href="projects/developing.html">Ball-balancing robot</a> - Experiemntal controls setup for MECHENG 4SS3 - finished - Summer 2023  </li>
-				<li><a href="projects/developing.html">NEUDOSE</a> - McMaster's CubeSAT mission - finished - Fall 2021 : Winter 2023  </li>
+				<li>Designed and built a ball and beam robotic system from scratch</li>
+				<li>Created a detailed CAD model of the setup</li>
+				<li>Wrote a Arduino C++ program including data collection from a soft potentiometer, writing to a servo motor, and determining joint angles with a PID controller</li>
+				<li>Created MATLAB simulations for dynamics and control validation</li>
+				<li>Laser cut and 3D printed components</li>
+				<li>Scaled to 11 setups total and manufactured all of them, storing in kits for students to assemble</li>
+				<li>The ball and beam setups were successfully used by over 50 students as their course project (used for two years)</li>
 			</ul>
+
 		</p>
-  		<!-- <img src="projects/goldenratio.jpg" alt="Smaller Image" style="width: 50%;">  -->
-
-		<!-- <p style="text-align: left; font-size: 24px;">
-			list of projects I've worked on
-			<ul>
-				<li>in progress</li>
-
-			</ul>
-		</p> -->
 
 	</body>
 </html>
