@@ -1,97 +1,253 @@
 <!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="icon" href="images/goldenratio.jpg">
+  <link rel="stylesheet" href="style.css">
+  <title>projects — pk</title>
+  <style>
+    .project-block {
+      padding: 28px 0;
+      border-top: 1px solid var(--border);
+      opacity: 0;
+      animation: appear 0.4s ease forwards;
+    }
+    .project-block:last-child { border-bottom: 1px solid var(--border); }
+    .project-meta {
+      display: flex;
+      justify-content: space-between;
+      align-items: baseline;
+      margin-bottom: 6px;
+    }
+    .project-title {
+      font-family: 'EB Garamond', serif;
+      font-size: 20px;
+      font-weight: 500;
+    }
+    .project-date {
+      font-size: 14px;
+      color: var(--gray);
+    }
+    .project-role {
+      font-size: 14px;
+      color: var(--gray);
+      margin-bottom: 12px;
+    }
+    .project-desc {
+      font-size: 16px;
+      line-height: 1.65;
+      margin-bottom: 12px;
+    }
+    .project-bullets {
+      font-size: 15px;
+      line-height: 1.7;
+      padding-left: 20px;
+      margin-bottom: 14px;
+    }
+    .project-bullets li {
+      margin-bottom: 4px;
+    }
+    .project-tags {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 6px;
+      margin-top: 12px;
+    }
+    .tag {
+      font-size: 13px;
+      padding: 2px 8px;
+      border: 1px solid var(--border);
+      color: var(--gray);
+    }
+    .project-media {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      margin-top: 16px;
+    }
+    .project-media img {
+      width: calc(50% - 5px);
+      max-width: 280px;
+      height: auto;
+      display: block;
+      border: 1px solid var(--border);
+    }
+    .project-media video {
+      width: 100%;
+      max-width: 580px;
+      height: auto;
+      display: block;
+      border: 1px solid var(--border);
+    }
+    .project-block:nth-child(1) { animation-delay: 0.05s; }
+    .project-block:nth-child(2) { animation-delay: 0.12s; }
+    .project-block:nth-child(3) { animation-delay: 0.19s; }
+    .project-block:nth-child(4) { animation-delay: 0.26s; }
+    .project-block:nth-child(5) { animation-delay: 0.33s; }
+    .project-block:nth-child(6) { animation-delay: 0.40s; }
+  </style>
+</head>
+<body>
 
-<html>
-	<head>
-		<style>
-			body {background-color: #ffffff;}
-		</style>
-		<meta charset="utf-8">
-		<meta name="viewport" content="width=device-width, initial-scale=1">
-		<link rel = "icon" href = "images/goldenratio.jpg">
-		<title>projects</title>
-	</head>
-	
-	<body>
-		<h1 style="font-size: 40px;"><i>PROJECTS</i></h1>
-	
-		<p style="text-align: left; font-size: 24px;">
-		<h2>7-degree-of-freedom Robot arm (IN PROGRESS)</h2> 
-		This project was done as part of my MASc degree requirements. The purpose of this robot arm is to serve as an experimental setup for developing control and estimation algorithms. 
-		This is a retro-fitted UR5 with all custom joint electronics, shaft couplings, and mounting plates. The arm was built from scratch with the help of three other graduate students. <br>		
+<nav>
+  <a href="index.html" class="site-name">Patrick Kosierb</a>
+  <div class="nav-links">
+    <a href="projects.html" class="active">Projects</a>
+    <a href="awards.html">Awards</a>
+    <a href="books.html">Books</a>
+    <a href="contact.html">Contact</a>
+  </div>
+</nav>
 
-		<h2>Toast-E: AI powered Smart Toaster </h2>		
-		<h4>Role - Software, Electronics, Assembly</h4>
-		My capstone project was an AI powered smart toaster running a closed loop controller for user selected crispiness level. This project was done with three other students. <br>		
-		
-		<img src="images/toaste_on.png" alt="Centered and Smaller Image" style="width: 30%;"> 
-		<img src="images/toaste_lcd.png" alt="Centered and Smaller Image" style="width: 30%;"> <br>
-		<img src="images/pcbrev2_1.png" alt="Centered and Smaller Image" style="width: 30%;"> 
-		<img src="images/pcbrev2_2.png" alt="Centered and Smaller Image" style="width: 30%;"> 
+<h1>Projects</h1>
 
-			<ul>
-				<li>Control script written in python running on a Raspberry Pi 4</li>
-				<li>Images captured every 15 seconds and put through a pre-trained CNN to determine crispiness of the toast</li>
-				<li>User selects crispiness level based on a touch screen LCD where a spectrum of levels is given (we also created an app)</li>
-				<li>Custom PCB housing a relay circuit for heating element control</li>
-				<li>Entire toaster was built from scratch using sheet metal, glass, nichrome wire, and 3D printed components</li>
-				<li>My primary focus was writting the control loop, creating and training the CNN, developing the PCB, and assembly of the toaster</li>
-			</ul>
+<div class="project-block">
+  <div class="project-meta">
+    <span class="project-title">7-DOF Robotic Arm</span>
+    <span class="project-date">2024 — ongoing</span>
+  </div>
+  <div class="project-role">MASc Research · Systems Integration, Control, Estimation</div>
+  <p class="project-desc">
+    This project was done as part of my MASc degree requirements. The purpose of this robot arm is to serve as an experimental setup for developing control and estimation algorithms. This is a retro-fitted UR5 with all custom joint electronics, shaft couplings, and mounting plates. The arm was built from scratch with the help of three other graduate students.
+  </p>
+  <div class="project-tags">
+    <span class="tag">C++</span>
+    <span class="tag">MATLAB</span>
+    <span class="tag">Python</span>
+    <span class="tag">EtherCAT</span>
+    <span class="tag">ROS2</span>
+    <span class="tag">MoveIt</span>
+    <span class="tag">PCB Design</span>
+    <span class="tag">State Estimation</span>
+  </div>
+</div>
 
-		<h2>Ball Balancing Robotic Setup</h2>
-		<h4>Role - Primary Developer	</h4>	
-		As an undergraduate robotics research assistant at the ICE lab I was tasked to create 10 ball and beam robotic systems as project kits for the MECHENG 4SS3: Smart Systems course. <br>		
-		
-		<img src="images/ball_and_beam.jpg" alt="Centered and Smaller Image" style="width: 30%;"> 
-		<video width="610"  muted controls>
-		<source src="videos/bab_moving.mp4" type="video/mp4">
-		</video> <br>
+<div class="project-block">
+  <div class="project-meta">
+    <span class="project-title">Toast-E: AI-Powered Smart Toaster</span>
+    <span class="project-date">2023 — 2024</span>
+  </div>
+  <div class="project-role">Capstone (Honourable Mention) · Software, Electronics, Assembly</div>
+  <p class="project-desc">
+    My capstone project was an AI powered smart toaster running a closed loop controller for user selected crispiness level. This project was done with three other students.
+  </p>
+  <div class="project-media">
+    <img src="images/toaste_on.png" alt="Toast-E toaster on">
+    <img src="images/toaste_lcd.png" alt="Toast-E LCD interface">
+    <img src="images/pcbrev2_1.png" alt="PCB revision 2 front">
+    <img src="images/pcbrev2_2.png" alt="PCB revision 2 back">
+  </div>
+  <ul class="project-bullets">
+    <li>Control script written in Python running on a Raspberry Pi 4</li>
+    <li>Images captured every 15 seconds and put through a pre-trained CNN to determine crispiness of the toast</li>
+    <li>User selects crispiness level based on a touch screen LCD where a spectrum of levels is given (we also created an app)</li>
+    <li>Custom PCB housing a relay circuit for heating element control</li>
+    <li>Entire toaster was built from scratch using sheet metal, glass, nichrome wire, and 3D printed components</li>
+    <li>My primary focus was writing the control loop, creating and training the CNN, developing the PCB, and assembly of the toaster</li>
+  </ul>
+  <div class="project-tags">
+    <span class="tag">Python</span>
+    <span class="tag">C++</span>
+    <span class="tag">Raspberry Pi</span>
+    <span class="tag">ESP32</span>
+    <span class="tag">PyTorch</span>
+    <span class="tag">PCB Design</span>
+  </div>
+</div>
 
-			<ul>
-				<li>Designed and built a ball and beam robotic system from scratch</li>
-				<li>Created a detailed CAD model of the setup</li>
-				<li>Wrote a Arduino C++ program including data collection from a soft potentiometer, writing to a servo motor, and determining joint angles with a PID controller</li>
-				<li>Created MATLAB simulations for dynamics and control validation</li>
-				<li>Laser cut and 3D printed components</li>
-				<li>Scaled to 11 setups, storing in kits for students to assemble</li>
-				<li>The ball and beam robotic setups were successfully used by over 50 students as their course project (used for two years)</li>
-			</ul>
+<div class="project-block">
+  <div class="project-meta">
+    <span class="project-title">Ball &amp; Beam Robotic Setup</span>
+    <span class="project-date">2023</span>
+  </div>
+  <div class="project-role">ICE Lab USRA · Primary Developer</div>
+  <p class="project-desc">
+    As a robotics research assistant at the ICE lab I was tasked to create 10 ball and beam robotic systems as project kits for the MECHENG 4SS3: Smart Systems course.
+  </p>
+  <div class="project-media">
+    <img src="images/ball_and_beam.jpg" alt="Ball and beam setup">
+    <video muted controls>
+      <source src="videos/bab_moving.mp4" type="video/mp4">
+    </video>
+  </div>
+  <ul class="project-bullets">
+    <li>Designed and built a ball and beam robotic system from scratch</li>
+    <li>Created a detailed CAD model of the setup</li>
+    <li>Wrote an Arduino C++ program including data collection from a soft potentiometer, writing to a servo motor, and determining joint angles with a PID controller</li>
+    <li>Created MATLAB simulations for dynamics and control validation</li>
+    <li>Laser cut and 3D printed components</li>
+    <li>Scaled to 11 setups, storing in kits for students to assemble</li>
+    <li>The ball and beam robotic setups were successfully used by over 50 students as their course project (used for two years)</li>
+  </ul>
+  <div class="project-tags">
+    <span class="tag">Arduino C++</span>
+    <span class="tag">PID Control</span>
+    <span class="tag">CAD</span>
+    <span class="tag">MATLAB</span>
+    <span class="tag">3D Printing</span>
+  </div>
+</div>
 
-		<h2>Self-Balancing Robot</h2>	
-		<h4>Role - Technical Mentor, Manufacturing</h4>
-		During my graduate studies I supported an undergraduate student researcher with the developemnt of a self-balancing robot used as a project kit for  MECHENG 4SS3: Smart Systems course. <br>
+<div class="project-block">
+  <div class="project-meta">
+    <span class="project-title">Self-Balancing Robot</span>
+    <span class="project-date">2024</span>
+  </div>
+  <div class="project-role">ICE Lab USRA · Technical Mentor, Manufacturing</div>
+  <p class="project-desc">
+    During my graduate studies I supported an undergraduate student researcher with the development of a self-balancing robot used as a project kit for MECHENG 4SS3: Smart Systems course.
+  </p>
+  <div class="project-media">
+    <img src="images/sb.jpg" alt="Self-balancing robot">
+    <img src="images/sb_kit.jpeg" alt="Self-balancing robot kit">
+    <video muted controls>
+      <source src="videos/sb_moving.MOV" type="video/mp4">
+    </video>
+  </div>
+  <ul class="project-bullets">
+    <li>Gave design feedback and assisted with debugging efforts (NOT PRIMARY DEVELOPER)</li>
+    <li>Assisted in Arduino C++ program development for control and tuned a PID controller for balancing</li>
+    <li>Manufactured 6 setups</li>
+    <li>The self balancing robot setup was successfully used for one year of the course</li>
+  </ul>
+  <div class="project-tags">
+    <span class="tag">Arduino C++</span>
+    <span class="tag">PID Control</span>
+    <span class="tag">Manufacturing</span>
+  </div>
+</div>
 
-		<img src="images/sb.jpg" alt="Centered and Smaller Image" style="width: 20%;"> 
-		<video width="720"  muted controls>
-		<source src="videos/sb_moving.MOV" type="video/mp4">
-		</video>
-		<img src="images/sb_kit.jpeg" alt="Centered and Smaller Image" style="width: 20%;"> <br>
 
-		<ul>
-			<li>Gave design feedback and assisted with debugging efforts (NOT PRIMARY DEVELOPER)</li>
-			<li>Assisted in Arduino C++ program developement for control and tuned a PID controller for balancing</li>
-			<li>Manufactured 6 setups</li>
-			<li>The self balancing robot setup was successfully used for one year of the course</li>
-		</ul>
+<div class="project-block">
+  <div class="project-meta">
+    <span class="project-title">Hobberman Lamp</span>
+    <span class="project-date">2022</span>
+  </div>
+  <div class="project-role">Rapid Prototyping Course · Design, Electronics, Manufacturing</div>
+  <p class="project-desc">
+    The Hobberman lamp is a retractable lamp taking advantage of a 3D printed Hoberman mechanism with variable dimming. The device was made for a rapid prototyping course project with two other students.
+  </p>
+  <div class="project-media">
+    <!-- <img src="images/hm_open.jpg" alt="Hobberman lamp open"> -->
+    <img src="images/hm_elec.jpg" alt="Hobberman lamp electronics">
+    <video muted controls>
+      <source src="videos/hm_moving.MOV" type="video/mp4">
+    </video>
+  </div>
+  <ul class="project-bullets">
+    <li>Designed structure of the lamp including the base and sliding mechanism</li>
+    <li>Used reference design of Hobberman sphere and made modifications to linkages and connectors</li>
+    <li>3D printed and assembled structure</li>
+    <li>Created the light circuit including a potentiometer, main power switch, limit switch at fully closed position</li>
+  </ul>
+  <div class="project-tags">
+    <span class="tag">3D Printing</span>
+    <span class="tag">CAD</span>
+    <span class="tag">Electronics</span>
+    <span class="tag">Rapid Prototyping</span>
+  </div>
+</div>
 
-		<h2>Hobberman Lamp</h2>	
-		<h4>Role - Design, Electronics, Manufacturing and Assembly</h4>
-		The Hobberman lamp is a retractable lamp taking advantage of 3D printed Hoberman mechanism with variable dimming. The device was made for a rapid protyping course project with two other students. <br>	  
-		
-		<img src="images/hm_open.jpg" alt="Centered and Smaller Image" style="width: 31%;"> 
-		<video width="200"  muted controls>
-		<source src="videos/hm_moving.MOV" type="video/mp4">
-		</video>
-		<img src="images/hm_elec.jpg" alt="Centered and Smaller Image" style="width: 17.5%;"> 
-		
-
-			<ul>
-				<li>Designed structure of the lamp including the base and sliding mechanism</li>
-				<li>Used reference design of Hobberman sphere and made modifcations to linkages and connectors </li>
-				<li>3D printed and assembled structure</li>
-				<li>Created the light circuit inclding a potentiometer, main power switch, limit switch at fully closed position </li>
-			</ul>
-
-		</p>
-
-	</body>
+</body>
 </html>

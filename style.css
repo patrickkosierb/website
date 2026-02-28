@@ -1,0 +1,291 @@
+@import url('https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400;0,500;1,400&display=swap');
+
+:root {
+  --white: #ffffff;
+  --black: #111111;
+  --gray: #888888;
+  --light: #f5f5f5;
+  --border: #e0e0e0;
+  --link: #111111;
+  --col: 640px;
+}
+
+* { margin: 0; padding: 0; box-sizing: border-box; }
+
+html { font-size: 16px; }
+
+body {
+  background: var(--white);
+  color: var(--black);
+  font-family: 'EB Garamond', serif;
+  font-size: 16px;
+  line-height: 1.7;
+  max-width: var(--col);
+  margin: 0 auto;
+  padding: 64px 24px 120px;
+  -webkit-font-smoothing: antialiased;
+}
+
+/* NAV */
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  margin-bottom: 64px;
+  padding-bottom: 16px;
+  border-bottom: 1px solid var(--border);
+}
+
+nav .site-name {
+  font-family: 'EB Garamond', serif;
+  font-size: 18px;
+  font-style: normal;
+  letter-spacing: 0.02em;
+  text-decoration: none;
+  color: var(--black);
+}
+
+nav .nav-links {
+  display: flex;
+  gap: 24px;
+}
+
+nav .nav-links a {
+  font-family: 'EB Garamond', serif;
+  font-size: 16px;
+  letter-spacing: normal;
+  text-transform: none;
+  color: var(--gray);
+  text-decoration: none;
+  transition: color 0.15s;
+}
+
+nav .nav-links a:hover,
+nav .nav-links a.active { color: var(--black); }
+
+/* HEADINGS */
+h1 {
+  font-family: 'EB Garamond', serif;
+  font-size: 28px;
+  font-weight: 400;
+  font-style: normal;
+  margin-bottom: 40px;
+  letter-spacing: 0.01em;
+}
+
+h2 {
+  font-family: 'EB Garamond', serif;
+  font-size: 20px;
+  font-weight: 500;
+  font-style: normal;
+  margin-bottom: 4px;
+  letter-spacing: 0.01em;
+}
+
+h3 {
+  font-family: 'EB Garamond', serif;
+  font-size: 16px;
+  font-weight: 400;
+  letter-spacing: normal;
+  text-transform: none;
+  color: var(--gray);
+  margin-bottom: 12px;
+}
+
+/* LINKS */
+a {
+  color: var(--link);
+  text-decoration: underline;
+  text-underline-offset: 3px;
+  text-decoration-thickness: 1px;
+}
+
+a:hover { color: var(--gray); }
+
+/* ENTRY / LOG FORMAT */
+.entry {
+  display: grid;
+  grid-template-columns: 80px 1fr;
+  gap: 0 24px;
+  padding: 18px 0;
+  border-top: 1px solid var(--border);
+  opacity: 0;
+  transform: translateY(8px);
+  animation: appear 0.4s ease forwards;
+}
+
+.entry:last-child { border-bottom: 1px solid var(--border); }
+
+.entry-date {
+  font-size: 14px;
+  letter-spacing: 0.04em;
+  color: var(--gray);
+  padding-top: 2px;
+  font-variant-numeric: tabular-nums;
+}
+
+.entry-content p {
+  font-size: 16px;
+  line-height: 1.5;
+}
+
+/* AWARDS LIST */
+.award-item {
+  padding: 18px 0;
+  border-top: 1px solid var(--border);
+  display: grid;
+  grid-template-columns: 80px 1fr auto;
+  gap: 0 24px;
+  align-items: baseline;
+  opacity: 0;
+  animation: appear 0.4s ease forwards;
+}
+
+.award-item:last-child { border-bottom: 1px solid var(--border); }
+
+.award-date {
+  font-size: 14px;
+  color: var(--gray);
+  letter-spacing: 0.04em;
+}
+
+.award-name {
+  font-size: 16px;
+}
+
+.award-amount {
+  font-size: 14px;
+  color: var(--gray);
+  white-space: nowrap;
+  letter-spacing: 0.04em;
+}
+
+.award-note {
+  grid-column: 2;
+  font-size: 14px;
+  color: var(--gray);
+  font-style: italic;
+  margin-top: 2px;
+}
+
+/* BOOKS */
+.book-item {
+  padding: 18px 0;
+  border-top: 1px solid var(--border);
+  display: grid;
+  grid-template-columns: 80px 1fr;
+  gap: 0 24px;
+  opacity: 0;
+  animation: appear 0.4s ease forwards;
+}
+
+.book-item:last-child { border-bottom: 1px solid var(--border); }
+
+.book-year {
+  font-size: 14px;
+  color: var(--gray);
+  letter-spacing: 0.04em;
+  padding-top: 2px;
+}
+
+.book-title {
+  font-size: 16px;
+  font-style: normal;
+}
+
+.book-author {
+  font-size: 14px;
+  color: var(--gray);
+  margin-top: 3px;
+}
+
+/* INDEX */
+.index-links {
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+}
+
+.index-link-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  padding: 14px 0;
+  border-top: 1px solid var(--border);
+  opacity: 0;
+  animation: appear 0.4s ease forwards;
+}
+
+.index-link-row:last-child { border-bottom: 1px solid var(--border); }
+
+.index-link-row a {
+  font-size: 18px;
+  font-style: normal;
+  text-transform: none;
+  text-decoration: none;
+  color: var(--black);
+  transition: color 0.15s;
+}
+
+.index-link-row a:hover { color: var(--gray); }
+
+.index-link-row .arrow {
+  font-size: 14px;
+  color: var(--gray);
+}
+
+/* CONTACT */
+.contact-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  padding: 14px 0;
+  border-top: 1px solid var(--border);
+  opacity: 0;
+  animation: appear 0.4s ease forwards;
+}
+
+.contact-row:last-child { border-bottom: 1px solid var(--border); }
+
+.contact-row .label {
+  font-size: 16px;
+  letter-spacing: normal;
+  text-transform: none;
+  color: var(--gray);
+}
+
+/* INTRO */
+.intro {
+  font-size: 16px;
+  line-height: 1.6;
+  color: var(--gray);
+  margin-bottom: 48px;
+}
+
+/* STAGGER DELAYS */
+.entry:nth-child(1), .award-item:nth-child(1), .book-item:nth-child(1), .index-link-row:nth-child(1), .contact-row:nth-child(1) { animation-delay: 0.05s; }
+.entry:nth-child(2), .award-item:nth-child(2), .book-item:nth-child(2), .index-link-row:nth-child(2), .contact-row:nth-child(2) { animation-delay: 0.10s; }
+.entry:nth-child(3), .award-item:nth-child(3), .book-item:nth-child(3), .index-link-row:nth-child(3), .contact-row:nth-child(3) { animation-delay: 0.15s; }
+.entry:nth-child(4), .award-item:nth-child(4), .book-item:nth-child(4), .index-link-row:nth-child(4), .contact-row:nth-child(4) { animation-delay: 0.20s; }
+.entry:nth-child(5), .award-item:nth-child(5), .book-item:nth-child(5), .index-link-row:nth-child(5), .contact-row:nth-child(5) { animation-delay: 0.25s; }
+.entry:nth-child(6), .award-item:nth-child(6), .book-item:nth-child(6), .index-link-row:nth-child(6), .contact-row:nth-child(6) { animation-delay: 0.30s; }
+.entry:nth-child(7), .award-item:nth-child(7) { animation-delay: 0.35s; }
+
+@keyframes appear {
+  to { opacity: 1; transform: translateY(0); }
+}
+
+/* FOOTER */
+footer {
+  margin-top: 80px;
+  font-size: 14px;
+  color: var(--gray);
+}
+
+/* RESPONSIVE */
+@media (max-width: 480px) {
+  .award-item { grid-template-columns: 60px 1fr; }
+  .award-amount { display: none; }
+  .entry { grid-template-columns: 60px 1fr; }
+  nav .nav-links { gap: 16px; }
+}
