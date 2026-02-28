@@ -47,7 +47,7 @@ nav .site-name {
 
 nav .nav-links {
   display: flex;
-  gap: 8px;
+  gap: 16px;
 }
 
 nav .nav-links a {
